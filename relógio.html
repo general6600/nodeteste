@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+
+<style>
+
+body{
+  background-color:black
+}
+#tela{
+  color:red;
+  font-size:20px
+  
+  
+}
+#tela1{
+  color:red;
+  font-size:20px;
+}
+#tela2{
+  color:red;
+  font-size:20px;
+}
+#dvtx{
+  
+
+  margin-top:100px;
+  margin-left:100px;
+  height:150px;
+  width:150px;
+  border:solid 1px red;
+  border-radius:50px;
+  text-align:center;
+  background-color: black
+  
+
+}
+  
+</style>
+
+<body>
+  
+  <div id="dvtx" >
+  
+    <p id="tela">texto</p>
+    <p id="tela1">texto1</p>
+    <p id="tela2">texto2</p>
+    
+  
+  </div>
+  <script>
+    function tempo(){
+      var data= new Date()
+      var segundos=data.getSeconds()
+      var minutos=data.getMinutes()
+      var hora=data.getHours()
+      var tela=document.getElementById("tela")
+      tela.innerHTML="segundos: " + segundos
+      var tela1=document.getElementById("tela1")
+      tela1.innerHTML="minutos: " + minutos
+      var tela2=document.getElementById("tela2")
+      tela2.innerHTML= " hora:  " + hora
+    }
+    setInterval(function(){
+      tempo()
+    }, 100)
+  </script>
+
+</body>
+
+</html>
